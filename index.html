@@ -1,1 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プレイド「KARTE」不正アクセス 主な公表企業・サービス一覧</title>
+  <style>
+    :root {
+      --bg-color: #f4f6f9;
+      --card-bg: #ffffff;
+      --primary: #1e3a5f;
+      --primary-light: #eef3f8;
+      --accent: #c0392b;
+      --border: #dce1e7;
+      --text-main: #222222;
+      --text-sub: #555555;
+      --badge-bg: #e8eef5;
+      --badge-text: #1e3a5f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 28px 32px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    header p {
+      font-size: 0.92rem;
+      opacity: 0.9;
+    }
+
+    .summary-box {
+      background-color: var(--card-bg);
+      padding: 24px 32px;
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .summary-title {
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .stat-card {
+      background-color: var(--primary-light);
+      border: 1px solid #d5e0ec;
+      border-radius: 6px;
+      padding: 12px 14px;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      color: var(--text-sub);
+    }
+
+    .stat-value {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+    }
+
+    .table-wrapper {
+      background-color: var(--card-bg);
+      margin-top: 20px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      overflow-x: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 780px;
+    }
+
+    thead {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    th {
+      text-align: left;
+      padding: 14px 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+      vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fafbfd;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f5fa;
+    }
+
+    .company-name {
+      font-weight: bold;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .service-badge {
+      display: inline-block;
+      background-color: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.78rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 2px;
+    }
+
+    .count {
+      font-weight: 600;
+      color: #111111;
+      white-space: nowrap;
+    }
+
+    .alert-footer {
+      margin-top: 20px;
+      background-color: #fff8f7;
+      border: 1px solid #f2c6c2;
+      border-left: 5px solid var(--accent);
+      border-radius: 6px;
+      padding: 16px 20px;
+      font-size: 0.88rem;
+    }
+
+    .alert-footer strong {
+      color: var(--accent);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 640px) {
+      header, .summary-box {
+        padding: 20px 18px;
+      }
+      header h1 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>プレイド「KARTE」不正アクセス 主な公表企業・サービス一覧</h1>
+      <p>2026年11月13日発生 ／ プレイド社調査結果（11月20日公表）および各社公式発表に基づく整理</p>
+    </header>
+
+    <section class="summary-box">
+      <div class="summary-title">影響範囲の全体像（延べ約2,200社・契約終了済みの残存データ含む）</div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">連携データの一部</div>
+          <div class="stat-value">570社</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">行動解析データの一部</div>
+          <div class="stat-value">487社</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">キャッシュデータの一部</div>
+          <div class="stat-value">最大 409社（推定）</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">外部サービス連携用認証情報</div>
+          <div class="stat-value">754社</div>
+        </div>
+      </div>
+      <p class="note">
+        ※各区分には重複があります。サービス再開は2027年1月中旬以降が目指されています。なお、原則としてクレジットカード番号・暗証番号・ログインパスワード・銀行口座番号は対象外と説明されています。
+      </p>
+    </section>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 26%;">企業名</th>
+            <th style="width: 22%;">対象サービス</th>
+            <th style="width: 34%;">公表された主な対象情報</th>
+            <th style="width: 18%;">公表規模（目安）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="company-name">ZOZO</span></td>
+            <td><span class="service-badge">ZOZOTOWN</span> <span class="service-badge">WEAR</span></td>
+            <td>会員ID・年齢・性別・郵便番号等（うち約4.7万人はログイン名・メール・電話も対象）、出店ブランド担当者情報</td>
+            <td class="count">ZOZO 約1,518万人<br>WEAR 約1,393万人</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">DHC</span></td>
+            <td><span class="service-badge">公式オンラインショップ等</span></td>
+            <td>氏名、メールアドレス、生年月日等</td>
+            <td class="count">約1,911万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">JINS</span></td>
+            <td><span class="service-badge">JINS会員サービス</span></td>
+            <td>会員属性・アカウント関連情報（影響の可能性）</td>
+            <td class="count">最大約1,829万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">丸井グループ</span></td>
+            <td><span class="service-badge">マルイウェブチャネル</span> <span class="service-badge">エポスカード</span></td>
+            <td>マルイ：氏名・性別・生年月日・メール等／エポス：顧客管理番号・性別（うち約6万人は氏名・年齢・年収・キャッシング限度額の可能性）</td>
+            <td class="count">マルイ 約883万件<br>エポス 約850万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">三井住友銀行</span></td>
+            <td><span class="service-badge">Web・スマホアプリ</span></td>
+            <td>生年月日・年齢帯・性別・電話番号登録有無・通知フラグ（氏名・口座番号等は対象外）</td>
+            <td class="count">最大約1,400万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">アインホールディングス</span></td>
+            <td><span class="service-badge">Francfranc</span> <span class="service-badge">アインズ＆トルペ</span> <span class="service-badge">AYURA</span></td>
+            <td>氏名・生年月日・性別・住所（都道府県/市区町村）・メール・電話・購入履歴等（漏えいの可能性）</td>
+            <td class="count">Francfranc 約598万件<br>アインズ等 約260万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">しまむら</span></td>
+            <td><span class="service-badge">会員サービス</span></td>
+            <td>会員属性情報等</td>
+            <td class="count">約700万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">ゴルフダイジェスト・オンライン</span></td>
+            <td><span class="service-badge">GDOゴルフショップ等</span></td>
+            <td>会員情報の一部</td>
+            <td class="count">最大 6,974,506件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">三菱UFJ銀行</span></td>
+            <td><span class="service-badge">Web・スマホアプリ</span></td>
+            <td>顧客の性別・年齢・居住地域（都道府県または政令指定都市）</td>
+            <td class="count">約650万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">CAMPFIRE</span></td>
+            <td><span class="service-badge">クラウドファンディング</span></td>
+            <td>会員関連情報</td>
+            <td class="count">5,819,779件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">ゴールドウイン</span></td>
+            <td><span class="service-badge">Goldwin Members</span></td>
+            <td>メール・都道府県・生年月日・性別・メルマガ設定・最終利用店舗等（氏名・口座等は対象外）</td>
+            <td class="count">3,666,010件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">キヤノンマーケティングジャパン</span></td>
+            <td><span class="service-badge">個人向けWebサービス</span></td>
+            <td>識別ID・市区町村・郵便番号・生年月日・年齢・性別・メルマガ購読情報等</td>
+            <td class="count">約366万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">ミツモア</span></td>
+            <td><span class="service-badge">ミツモア</span></td>
+            <td>識別番号・都道府県のみ（約339.8万件）、氏名・メール・電話・生年月日のいずれか（6万件）</td>
+            <td class="count">計 約345.8万人</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">シャープ</span></td>
+            <td><span class="service-badge">COCORO STORE</span></td>
+            <td>会員属性・内部識別情報（漏えいのおそれ・調査中）</td>
+            <td class="count">最大 3,264,445件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">Jリーグ・WEリーグ</span></td>
+            <td><span class="service-badge">Jリーグチケット</span> <span class="service-badge">Fantasy Card</span></td>
+            <td>会員識別子・生年月日・性別・居住地域等（チケット）、メール・識別番号等（カード）</td>
+            <td class="count">チケット 2,383,073件<br>カード 543件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">ユニフォームネクスト</span></td>
+            <td><span class="service-badge">法人向けECサイト</span></td>
+            <td>会社名、氏名、メール、電話、郵便番号、職種、業種</td>
+            <td class="count">最大 1,701,006件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">オプテージ</span></td>
+            <td><span class="service-badge">mineo（マイネオ）</span></td>
+            <td>メール、性別、年代、郵便番号、都道府県、誕生日、記念日等（解約者含む）</td>
+            <td class="count">最大約142万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">オートバックスセブン</span></td>
+            <td><span class="service-badge">公式アプリ・Web</span></td>
+            <td>会員番号やIPアドレス等</td>
+            <td class="count">約137万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">NTTソルマーレ</span></td>
+            <td><span class="service-badge">コミックシーモア</span> <span class="service-badge">MangaPlaza</span></td>
+            <td>シーモア：ハッシュ化識別子・メール・ニックネーム等／MangaPlaza：ハッシュ化識別子・国・年齢等</td>
+            <td class="count">シーモア 約13万件<br>MangaPlaza 117万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">MOSH</span></td>
+            <td><span class="service-badge">MOSH（予約・決済）</span></td>
+            <td>ゲスト・クリエイターのメールアドレスとユーザーID</td>
+            <td class="count">928,617件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">ウェルスナビ</span></td>
+            <td><span class="service-badge">WealthNavi</span></td>
+            <td>顧客関連データ（漏えい確認）</td>
+            <td class="count">約91万人</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">ベースフード</span></td>
+            <td><span class="service-badge">BASE FOOD公式EC</span></td>
+            <td>メールアドレス・氏名（約71万件）、氏名・電話番号（約2.6万件）、メールのみ（約1.5万件）</td>
+            <td class="count">計 約75.1万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">四国電力</span></td>
+            <td><span class="service-badge">よんでんコンシェルジュ</span></td>
+            <td>顧客名、メール、住所、性別、誕生日等（法人会員は性別・誕生日除く）</td>
+            <td class="count">約60万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">レンティオ</span></td>
+            <td><span class="service-badge">Rentio</span> <span class="service-badge">Rentify</span></td>
+            <td>会員情報の一部（退会者含む）</td>
+            <td class="count">388,788人</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">肥後銀行</span></td>
+            <td><span class="service-badge">肥後銀行アプリ</span></td>
+            <td>お客さま管理番号・生年月日</td>
+            <td class="count">最大 377,194件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">ワールド / ティンパンアレイ</span></td>
+            <td><span class="service-badge">RAGTAG</span> <span class="service-badge">ワールドオンラインストア</span></td>
+            <td>RAGTAG：会員ID・性別・年齢・メール・電話・LINE ID・生年月日／ワールド：会員ID・購入回数・購入金額</td>
+            <td class="count">RAGTAG 最大37万人<br>ワールド 最大3,700件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">エストネーション</span></td>
+            <td><span class="service-badge">ESTNATIONオンラインストア</span></td>
+            <td>オンラインストア会員関連情報</td>
+            <td class="count">360,374件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">東京ガス</span></td>
+            <td><span class="service-badge">myTOKYOGAS</span> <span class="service-badge">ウォーターサーバー</span></td>
+            <td>myTOKYOGAS：ハッシュ化会員ID／ウォーターサーバー：氏名・メール・電話・生年月日・性別・都道府県等</td>
+            <td class="count">myTOKYO 約30万件<br>サーバー 約4.9万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">阪急阪神ホテルズ</span></td>
+            <td><span class="service-badge">第一ホテルグループメンバーズ</span></td>
+            <td>氏名、年齢、住所、電話番号、メールアドレス等</td>
+            <td class="count">最大 331,586件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">SOMPOひまわり生命</span></td>
+            <td><span class="service-badge">MYひまわり</span> <span class="service-badge">aruku&</span></td>
+            <td>内部管理用ID・配信承諾フラグ・任意登録の生年月日と性別（氏名・証券番号等は対象外）</td>
+            <td class="count">MYひまわり 約6万件<br>aruku& 約26万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">三菱UFJモルガン・スタンレー証券</span></td>
+            <td><span class="service-badge">オンライントレード</span></td>
+            <td>顧客の性別・年代等の属性データ</td>
+            <td class="count">約28万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">タイミー</span></td>
+            <td><span class="service-badge">Timee（求人事業者向け）</span></td>
+            <td>求人事業者担当者の氏名・メール・電話等</td>
+            <td class="count">最大 226,662人</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">インテージ</span></td>
+            <td><span class="service-badge">ショピレコ</span></td>
+            <td>識別ID・生年月・年齢・性別コード・居住都道府県コード</td>
+            <td class="count">204,516人</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">コーセー / 毎日新聞 / 横浜銀行 ほか</span></td>
+            <td><span class="service-badge">ADDICTION</span> <span class="service-badge">毎日新聞デジタル</span> <span class="service-badge">はまぎん365</span> <span class="service-badge">三菱UFJ eスマート証券</span></td>
+            <td>ADDICTION：氏名カナ約14万件／毎日新聞：姓・年齢等約14万件／横浜銀行：属性約11.6万件／eスマート証券：口座番号約6万件・年齢約10.5万件</td>
+            <td class="count">各 約10万〜14万件</td>
+          </tr>
+          <tr>
+            <td><span class="company-name">その他の主な公表企業</span></td>
+            <td><span class="service-badge">BEAMS</span> <span class="service-badge">ポーラ</span> <span class="service-badge">マネーフォワード</span> <span class="service-badge">リクルート</span> <span class="service-badge">ハウス食品</span> <span class="service-badge">モリサワ</span> <span class="service-badge">GO</span> <span class="service-badge">S.RIDE</span> <span class="service-badge">小田急電鉄</span> <span class="service-badge">テレビ東京</span> <span class="service-badge">日経電子版</span> <span class="service-badge">ワコール</span> <span class="service-badge">コメ兵</span> <span class="service-badge">カウネット</span> <span class="service-badge">クボタ</span> ほか</td>
+            <td>各社Web・アプリ・EC・会員サービスにおける識別ID、メールアドレス、属性情報、過去契約時の残存データ等（精査・個別連絡進行中）</td>
+            <td class="count">数千〜数万件規模<br>・調査中含む</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert-footer">
+      <strong>二次被害（フィッシング・なりすまし）へのご注意</strong>
+      メールアドレスや氏名・識別ID等が流出したサービスでは、プレイドや各企業をかたる不審なメール・SMSが送付されるリスクが高まっています。心当たりのないURLや添付ファイルは開かず、必ず公式アプリやブックマークした公式サイトから最新情報をご確認ください。
+    </div>
+  </div>
+</body>
+</html>
 
